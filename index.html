@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-xl{
+            font-size: 24px;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }
+        .text-green{
+            color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Lorem ipsum dolor sit amet.</h1>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Amet, ex!</li>
+        <li>Quis, sit.</li>
+        <li>Laboriosam, sint?</li>
+    </ul>
+    <button onclick="document.getElementsByTagName('body')[0].style.backgroundColor='purple';">BG Purple</button>
+    <button onclick="changeBgToCoral()">BG Coral</button>
+    <button id="btn-bg-ash">BG Ash</button>
+    <button id="btn-bg-lime">BG Lime</button>
+
+    <script>
+        let h = document.getElementById("title");
+        h.innerHTML = "Hello there";
+
+        let ul = document.querySelector("ul");
+
+        for(const li of ul.children) {
+            // li.style.color = "red";
+            li.style.fontSize = "20px"
+            li.style.padding = "10px 20px"
+        }
+
+        ul.children[0].setAttribute('class', 'text-green');
+        ul.children[0].setAttribute('class', 'bg-yellow');
+
+        console.log(ul.children[0].classList)
+
+
+        // let newUl = document.createElement("ul");
+        
+        // let li1 = document.createElement("li");
+        // li1.innerText = "A";
+        // let li2 = document.createElement("li");
+        // li2.innerText = "B";
+        // let li3 = document.createElement("li");
+        // li3.innerText = "C";
+        // newUl.appendChild(li1);
+        // newUl.appendChild(li2);
+        // newUl.appendChild(li3);
+
+        // newUl.innerHTML = `
+        // <li>A</li>
+        // <li>B</li>
+        // <li>C</li>
+        // `
+        // document.getElementsByTagName("body")[0].appendChild(newUl);
+    </script>
+
+    <script src="events.js"></script>
+</body>
+</html>
